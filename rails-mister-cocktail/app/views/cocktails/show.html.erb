@@ -1,0 +1,48 @@
+<div class="container">
+  <h2 class="show-name"><%= @cocktail.name.upcase %></h2>
+
+
+
+  <div class="show-content">
+    <div class="show-photo">
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 300, crop: :fill %>
+      <p class="show-photo-name text-center">(<%= @cocktail.name %>)</p>
+    </div>
+    <div class="ingredients">
+      <h3 class="show-title">Ingredients</h3>
+      <ul class="show-list">
+        <% @cocktail.doses.each do |dose| %>
+          <li>
+            <p>
+              ・ <%= dose.ingredient.name %> | <%= dose.description %>&nbsp;&nbsp;&nbsp; (<%= link_to 'delete', dose_path(dose), method: :delete %>)
+            </p>
+          </li>
+        <% end %>
+      </ul>
+
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+        <%= f.submit "Add ingredient", class: "btn-medium" %>
+      <% end %>
+    </div>
+
+    <div class="reviews">
+      <h3 class="show-title">Reviews</h3>
+      <ul class="show-list">
+        <% @cocktail.reviews.each do |review| %>
+          <li><p><% review.rating.times do %><i class="far fa-star"></i>&nbsp;<% end %> <%= review.content %></p></li>
+        <% end %>
+      </ul>
+
+      <%= simple_form_for [@cocktail, @review] do |f| %>
+        <%= f.input :content %>
+        <%= f.input :rating, collection: Review::RATINGS %>
+        <%= f.submit "Add review", class: "btn-medium" %>
+      <% end %>
+    </div>
+  </div>
+  <form>
+    <input type="button" value="← back" onclick="history.back()" class="btn-back">
+  </form>
+</div>

@@ -1,0 +1,25 @@
+<div class="create-new">
+  <div class="container">
+    <h2>Create new</h2>
+
+
+      <%= simple_form_for(@cocktail) do |f| %>
+        <% if @cocktail.errors.any? %>
+          <div class="errors-container">
+            <ul>
+              <% @cocktail.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+          <%= f.input :name %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <button id="sweet-alert-new-cocktail" class="btn-medium">Create new</button>
+      <% end %>
+    <form>
+      <input type="button" value="← back" onclick="history.back()" class="btn-back">
+    </form>
+  </div>
+</div>

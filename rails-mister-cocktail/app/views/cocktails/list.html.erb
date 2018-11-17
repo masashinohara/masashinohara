@@ -1,0 +1,15 @@
+<div class="container">
+  <form action="/cocktails" method="get">
+    <input type="text" name="name" class="form-control form-control-plaintext search" placeholder="Search">
+  </form>
+
+  <% @cocktails.each do |cocktail| %>
+    <h3>
+      <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    </h3>
+  <% end %>
+
+  <form>
+    <input type="button" value="← back" onclick="history.back()" class="btn-back">
+  </form>
+</div>

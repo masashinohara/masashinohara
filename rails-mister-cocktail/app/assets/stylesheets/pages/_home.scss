@@ -1,0 +1,177 @@
+// Specific CSS for your home-page
+
+body {
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 50%), url("background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  opacity: 0.9;
+}
+
+h1 {
+  font-weight: 250 !important;
+}
+
+h2 {
+  font-weight: 700 !important;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-weight: 250 !important;
+}
+
+p {
+  line-height: 1.6rem;
+  color: white;
+  font-weight: 250 !important;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 2rem;
+  padding-left: 0 !important;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF7A33;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.content {
+  min-height: calc(100vh - 280px);
+}
+
+.index-content {
+  min-height: calc(200vh - 280px);
+}
+
+.default-banner {
+  margin-top: 100px;
+  height: 400px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.down-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#section2 {
+  margin-top: 200px;
+  height: 500px;
+}
+
+.list-container {
+  height: 500px;
+}
+
+.btn-medium {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  background: linear-gradient(50deg, orange, #ed5c5c);
+  border: 0px solid white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+
+.btn-medium:hover {
+  opacity: 0.6;
+  color: white;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-back {
+  font-size: 1.6rem;
+  font-weight: 250;
+  color: white;
+  background: rgba(255, 255, 255, 0);
+  border: 0px solid white;
+  margin-top: 30px;
+}
+
+.btn-back:hover {
+  opacity: 0.6;
+  color: white;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0);
+}
+
+.btn-medium-large {
+  font-size: 2rem;
+  padding: 15px 25px;
+}
+
+.form-control {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-control-label {
+  font-weight: 250 !important;
+}
+
+.file {
+  font-weight: 250 !important;
+}
+
+.form-control:focus {
+  background: rgba(255, 122, 51, 0.03);
+}
+
+.search {
+  width: 400px !important;
+  border-radius: 50px;
+  margin-bottom: 50px;
+}
+
+.show-name {
+  padding-left: 70px;
+  margin-bottom: 50px;
+}
+
+.show-content {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.show-title {
+  margin-bottom: 30px;
+}
+
+.show-photo {
+  margin-top: 30px;
+}
+
+.show-photo-name {
+  margin-top: 30px;
+}
+
+.show-list {
+  margin-bottom: 30px;
+}
